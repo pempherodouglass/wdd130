@@ -1,22 +1,41 @@
-/* Limit main width */
+/* nav styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 8px;
+    display: block;
+    text-decoration: none;
+}
+
+/* main styling */
 main {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Profile image inside main */
+h1 {
+    color: #2a2a2a;
+}
+
+/* profile image inside main */
 main img {
     width: 150px;
     height: auto;
-    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Reset paragraph padding */
+/* reset paragraph padding */
 p {
     padding: 0;
 }
 
-/* Aside styling */
+/* aside styling */
 aside {
     width: 300px;
     margin: 20px auto;
@@ -26,13 +45,13 @@ aside {
     color: #333;
 }
 
-/* Image inside aside */
+/* image inside aside */
 aside img {
     width: 200px;
     height: auto;
 }
 
-/* Footer styling */
+/* footer styling */
 footer {
     margin-top: 20px;
     border-top: 2px solid #ccc;
