@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #004080;
+    --accent1-color: #000000;
+    --heading-font: 'Arial Black', sans-serif;
+    --body-font: Arial, sans-serif;
+    --heading-size: 16px;
+    /* small headings */
+    --body-size: 12px;
+    /* small body text */
+}
+
+* {
+    margin: 2px;
+    /* keep margins tiny */
+    padding: 2px;
+    /* keep padding tiny */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--body-size);
+    color: var(--accent1-color);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    font-size: var(--heading-size);
+    color: var(--primary-color);
+}
+
+p,
+section,
+article,
+nav {
+    margin: 8px;
+    padding: 4px;
+    font-size: var(--body-size);
+}
+
+/* Social media icons: medium size + row layout */
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    /* stack horizontally */
+    justify-content: flex-start;
+    /* align to the left */
+    gap: 20px;
+    /* space between icons */
+}
+
+.socialmedia a img {
+    width: 64px;
+    /* medium size icons */
+    height: auto;
+    /* keep proportions */
+}
+
+/* Article images: small and aligned left with text below */
+article img {
+    width: 120px;
+    /* small size for article pictures */
+}
