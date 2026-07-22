@@ -1,59 +1,58 @@
-/* nav styling */
-nav {
-    background-color: #333;
-    padding: 10px;
+/* Universal reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav a {
-    color: white;
-    padding: 8px;
-    display: block;
-    text-decoration: none;
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-/* main styling */
+/* Limit main width */
 main {
-    max-width: 800px;
+    width: 600px;
     margin: 0 auto;
 }
 
-h1 {
-    color: #2a2a2a;
+/* Aside styling */
+aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #004080;
+    padding: 10px;
+    background-color: #f0f8ff;
+    color: #004080;
 }
 
-/* profile image inside main */
+aside img {
+    width: 200px;
+    height: auto;
+    /* maintain aspect ratio */
+    display: block;
+    margin: 10px auto;
+}
+
+/* Profile image inside main */
 main img {
     width: 150px;
     height: auto;
-    border: 2px solid #ccc;
-    padding: 5px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 10px auto;
 }
 
-/* reset paragraph padding */
+/* Paragraph reset */
 p {
     padding: 0;
 }
 
-/* aside styling */
-aside {
-    width: 300px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    padding: 15px;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* image inside aside */
-aside img {
-    width: 200px;
-    height: auto;
-}
-
-/* footer styling */
+/* Footer styling */
 footer {
     margin-top: 20px;
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #004080;
     text-align: center;
+    padding: 10px;
 }
