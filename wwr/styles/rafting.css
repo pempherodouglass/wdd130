@@ -10,7 +10,10 @@
     /* small body text */
 }
 
-* {
+/* Universal selector reset */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -88,6 +91,7 @@ article img {
 
 .hero h1 {
     position: absolute;
+    /* overlays on top of image */
     top: 20px;
     width: 100%;
     padding: 16px;
@@ -99,6 +103,7 @@ article img {
 
 .hero article {
     position: absolute;
+    /* overlays on top of image */
     bottom: 10%;
     left: 10%;
     max-width: 60%;
