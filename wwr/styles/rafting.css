@@ -1,6 +1,7 @@
 :root {
     --primary-color: #004080;
     --accent1-color: #000000;
+    /* black accent color */
     --heading-font: 'Arial Black', sans-serif;
     --body-font: Arial, sans-serif;
     --heading-size: 16px;
@@ -10,10 +11,8 @@
 }
 
 * {
-    margin: 2px;
-    /* keep margins tiny */
-    padding: 2px;
-    /* keep padding tiny */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -23,6 +22,13 @@ body {
     color: var(--accent1-color);
 }
 
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
 h1,
 h2 {
     font-family: var(--heading-font);
@@ -30,35 +36,82 @@ h2 {
     color: var(--primary-color);
 }
 
+nav,
 p,
 section,
-article,
-nav {
-    margin: 8px;
-    padding: 4px;
-    font-size: var(--body-size);
+article {
+    margin: 16px;
+    padding: 8px;
 }
 
 /* Social media icons: medium size + row layout */
 .socialmedia {
     display: flex;
     flex-direction: row;
-    /* stack horizontally */
     justify-content: flex-start;
-    /* align to the left */
     gap: 20px;
-    /* space between icons */
+}
+
+.socialmedia a {
+    text-decoration: none;
+    /* remove underline */
 }
 
 .socialmedia a img {
-    width: 64px;
-    /* medium size icons */
+    width: 80px;
     height: auto;
-    /* keep proportions */
 }
 
 /* Article images: small and aligned left with text below */
 article img {
     width: 120px;
-    /* small size for article pictures */
+    height: auto;
+    margin: 8px 0;
+    display: block;
+    text-align: left;
+}
+
+/* Hero overlay positioning */
+.hero {
+    position: relative;
+    /* positioning context */
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    max-width: 60%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Float article image to the right */
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin: 0 0 10px 10px;
 }
