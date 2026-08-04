@@ -58,34 +58,23 @@ h1 {
 }
 
 .contact-info {
+    display: flex;
+    /* ensures side-by-side layout */
     align-items: stretch;
     text-align: center;
     gap: 2rem;
     margin: 2rem 0;
-    order: 2;
-
 }
 
 .company-details {
     flex: 1;
     font-size: 1.1rem;
     line-height: 1.6;
-    order: 2;
-
 }
 
 .map {
-
     flex: 2;
     text-align: left;
-    order: 1;
-}
-
-.contact-form form {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1.5rem;
-    align-items: center;
 }
 
 .radio-group {
@@ -103,7 +92,7 @@ h1 {
 
 .contact-form form {
     display: flex;
-    /* choose flex OR grid, not both */
+    /* choose flex OR grid */
     flex-direction: column;
     /* stack label + input vertically */
     gap: 1rem;

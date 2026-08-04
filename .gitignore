@@ -1,4 +1,4 @@
-header {
+      header {
     border: 1px solid black;
     background-color: #98a;
     padding: 20px 0;
@@ -6,27 +6,51 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 nav ul {
     list-style: none;
-    /* removes bullet points */
     padding: 0;
     margin: 0;
     display: flex;
-    /* makes links horizontal */
-    gap: 20px;
-    /* space between links */
+    /* horizontal row */
+    border: 2px solid black;
+    /* outer border */
+}
+
+nav ul li {
+    flex: 1;
+    /* equal length for all items */
+    text-align: center;
+    border-right: 2px solid black;
+    /* divider between items */
+}
+
+nav ul li:last-child {
+    border-right: none;
+    /* remove border on last item */
 }
 
 nav ul li a {
     text-decoration: none;
-    /* removes underline */
+    /* no underline */
     color: black;
-    /* sets text color */
     font-weight: bold;
-    /* optional: makes text bold */
+    display: block;
+    /* fills the li box */
+    padding: 15px 0;
+    /* controls height/length */
+}
+
+.logo-box {
+    border: 2px solid #333;
+    padding: 0.5rem;
+    background-color: aliceblue;
+}
+
+.logo-box img {
+    width: 100px;
+    height: auto;
 }
 
 h1 {
@@ -73,46 +97,17 @@ h1 {
 .contact-form {
     max-width: 600px;
     margin: 2rem auto;
-    /* centers the form block */
     text-align: end;
-    /* centers text inside */
-    margin-top: -500px;
-    /* small rise */
     position: sticky;
-    /* remove the -500px hack */
 }
 
 .contact-form form {
     display: flex;
+    /* choose flex OR grid, not both */
     flex-direction: column;
     /* stack label + input vertically */
     gap: 1rem;
+    /* consistent spacing */
     align-items: flex-end;
-    /* centers inputs and labels together */
+    /* align inputs and labels together */
 }
-
- <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2404.1887464603737!2d-1.0962517184825054!3d52.94502674319095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c405e51afd01%3A0x842b363a3885c500!2sWhite%20Water%20Rafting%20at%20Holme%20Pierrepont%20Country%20Park!5e0!3m2!1sen!2smw!4v1785503002988!5m2!1sen!2smw"
-                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-   .contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    /* centers the form block */
-    text-align: end;
-    /* centers text inside */
-    margin-top: -500px;
-    /* small rise */
-    position: sticky;
-    /* remove the -500px hack */
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    /* stack label + input vertically */
-    gap: 1rem;
-    align-items: flex-end;
-    /* centers inputs and labels together */
-}               
