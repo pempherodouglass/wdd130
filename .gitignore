@@ -1,1 +1,92 @@
-.DS_Store
+header {
+    border: 1px solid black;
+    background-color: #98a;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    /* removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* makes links horizontal */
+    gap: 20px;
+    /* space between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* removes underline */
+    color: black;
+    /* sets text color */
+    font-weight: bold;
+    /* optional: makes text bold */
+}
+
+h1 {
+    text-align: center;
+}
+
+.contact-info {
+    align-items: stretch;
+    text-align: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    order: 2;
+
+}
+
+.company-details {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    order: 2;
+
+}
+
+.map {
+
+    flex: 2;
+    text-align: left;
+    order: 1;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    /* centers the form block */
+    text-align: end;
+    /* centers text inside */
+    margin-top: -500px;
+    /* small rise */
+    position: sticky;
+    /* remove the -500px hack */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    /* stack label + input vertically */
+    gap: 1rem;
+    align-items: flex-end;
+    /* centers inputs and labels together */
+}

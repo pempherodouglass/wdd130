@@ -1,206 +1,116 @@
-:root {
-    --primary-color: #004080;
-    --accent1-color: #000000;
-    /* black accent color */
-    --heading-font: 'Arial Black', sans-serif;
-    --body-font: Arial, sans-serif;
-    --heading-size: 16px;
-    /* small headings */
-    --body-size: 12px;
-    /* small body text */
-}
-
-/* Universal selector reset */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    font-size: var(--body-size);
-    color: var(--accent1-color);
-}
-
-/* Page width */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    font-size: var(--heading-size);
-    color: var(--primary-color);
-}
-
-/* Spacing */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Header Layout with Grid */
 header {
-    display: grid;
-    grid-template-columns: 150px auto;
+    border: 1px solid black;
+    background-color: #98a;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 1rem;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Navigation with Flexbox */
-header nav {
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+    /* horizontal row */
+    border: 2px solid black;
+    /* outer border */
 }
 
-header nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    color: #ffcc00;
-}
-
-/* Social media icons */
-.socialmedia {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia a img {
-    width: 80px;
-    height: auto;
-}
-
-/* Article images */
-article img {
-    width: 120px;
-    height: auto;
-    margin: 8px 0;
-    display: block;
-    text-align: left;
-}
-
-/* Hero overlay positioning */
-.hero {
-    position: relative;
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    max-width: 60%;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
-    margin: 0 0 10px 10px;
-}
-
-/* History Section Layout */
-section.history {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-section.history img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* Adventures Section */
-.adventures {
-    margin: 2rem;
-}
-
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.adventure-gallery figure {
+nav ul li {
     flex: 1;
+    /* equal length for all items */
+    text-align: center;
+    border-right: 2px solid black;
+    /* divider between items */
+}
+
+nav ul li:last-child {
+    border-right: none;
+    /* remove border on last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* no underline */
+    color: black;
+    font-weight: bold;
+    display: block;
+    /* fills the li box */
+    padding: 15px 0;
+    /* controls height/length */
+}
+
+.logo-box {
+    border: 2px solid #333;
+    padding: 0.5rem;
+    background-color: aliceblue;
+}
+
+.logo-box img {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
     text-align: center;
 }
 
-.adventure-gallery img {
-    width: 100%;
-    border-radius: 6px;
+.contact-info {
+    align-items: stretch;
+    text-align: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    order: 2;
+
 }
 
-.adventure-gallery figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
+.company-details {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    order: 2;
+
 }
 
-/* Footer Layout */
-footer {
-    display: flex;
-    justify-content: space-between;
+.map {
+
+    flex: 2;
+    text-align: left;
+    order: 1;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
     align-items: center;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    /* centers the form block */
+    text-align: end;
+    /* centers text inside */
+    margin-top: -500px;
+    /* small rise */
+    position: sticky;
+    /* remove the -500px hack */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    /* stack label + input vertically */
+    gap: 1rem;
+    align-items: flex-end;
+    /* centers inputs and labels together */
 }
