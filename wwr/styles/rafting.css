@@ -92,7 +92,7 @@ h1 {
 
 .contact-form form {
     display: flex;
-    /* choose flex OR grid */
+    /* use flex OR grid, not both */
     flex-direction: column;
     /* stack label + input vertically */
     gap: 1rem;
