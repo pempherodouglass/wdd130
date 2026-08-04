@@ -97,20 +97,17 @@ h1 {
 .contact-form {
     max-width: 600px;
     margin: 2rem auto;
-    /* centers the form block */
     text-align: end;
-    /* centers text inside */
-    margin-top: -500px;
-    /* small rise */
     position: sticky;
-    /* remove the -500px hack */
 }
 
 .contact-form form {
     display: flex;
+    /* choose flex OR grid, not both */
     flex-direction: column;
     /* stack label + input vertically */
     gap: 1rem;
+    /* consistent spacing */
     align-items: flex-end;
-    /* centers inputs and labels together */
+    /* align inputs and labels together */
 }
